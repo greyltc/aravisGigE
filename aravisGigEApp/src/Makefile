@@ -20,10 +20,10 @@ DBD += aravisCameraSupport.dbd
 
 # NG3E: works on Linux Mint and CentOS 7.3 (glib-2.0_DIR not needed)
 #       aravis-0.4.1 from source installed into /usr/local/
-USR_INCLUDES += $(shell PKG_CONFIG_PATH=/usr/local/lib/pkgconfig pkg-config --cflags glib-2.0 aravis-0.4)
+USR_INCLUDES += $(shell pkg-config --cflags glib-2.0 aravis-0.6)
 
 USR_SYS_LIBS += glib-2.0
-USR_SYS_LIBS += aravis-0.4
+USR_SYS_LIBS += aravis-0.6
 
 include $(ADCORE)/ADApp/commonLibraryMakefile
 
